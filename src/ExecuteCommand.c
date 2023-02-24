@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <string.h>
 #include "../lib/cons.h"
+#include <errno.h>
 
 void ExecuteCommand(struct CommandInput command) {
 
@@ -15,8 +16,12 @@ void ExecuteCommand(struct CommandInput command) {
 	/* run the command in a seperate process */
 	int status_code = execvp(runpath, command.args);
  
-	if (status_code == -1){
+	if (errno == ENOENT){
 		printf("Error 2 (No such file or directory)");
+	}
+	
+	if (errno == EACCES){
+		printf("Error 13 (Permission denied)")
 	}
   
   }
