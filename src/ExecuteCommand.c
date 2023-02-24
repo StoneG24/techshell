@@ -21,7 +21,7 @@ void ExecuteCommand(struct CommandInput command) {
 	}
 	
 	if (errno == EACCES){
-		printf("Error 13 (Permission denied)")
+		printf("Error 13 (Permission denied)");
 	}
   
   }
