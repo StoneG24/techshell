@@ -17,11 +17,11 @@ void ExecuteCommand(struct CommandInput command) {
 	int status_code = execvp(runpath, command.args);
  
 	if (errno == ENOENT){
-		printf("Error 2 (No such file or directory)");
+		printf("Error: %s\n", strerror(errno));
 	}
 	
 	if (errno == EACCES){
-		printf("Error 13 (Permission denied)");
+		printf("Error: %s\n", sterror(errno));
 	}
   
   }
