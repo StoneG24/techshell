@@ -16,16 +16,7 @@ void ExecuteCommand(struct CommandInput command) {
 	int status_code = execvp(runpath, command.args);
  
 	if (status_code == -1){
-		printf("Process did not terminate correctly\n");
+		printf("Error 2 (No such file or directory)");
 	}
-	
-	 
-	if (status_code == -1){
-	  printf("Process did not terminate correctly\n");
-	}
- 
-  
-  
-  
   
   }
