@@ -1,5 +1,7 @@
 This is the techshell program. For debug mode change DEBUG to 1 in lib/cons.h
 
+By: Vito Mumphrey and Stone Gorman
+
 TODO
 
 I/O redirection
