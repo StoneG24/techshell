@@ -12,12 +12,14 @@ FILE* IORedirect(char operator) {
 		/* dup2(fileno(outfile), 0); */
 	
 		file = outfile;
+		fclose(outfile);
 
 	}else if (operator == '<') {
 		FILE* infile = fopen("inputFile", "r");
 		/* dup2(fileno(infile), 0); */
 
 		file = infile;
+		fclose(infile);
 	}
 
 	return file;
